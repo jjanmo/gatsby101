@@ -1,6 +1,6 @@
-import { Link } from 'gatsby';
 import * as React from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO/SEO';
 
 export default function Index() {
   return (
@@ -9,3 +9,5 @@ export default function Index() {
     </Layout>
   );
 }
+
+export const Head = () => <SEO title="Home" />;
