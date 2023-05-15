@@ -2,10 +2,11 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 interface Props {
+  title: string;
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children, title }: Props) {
   return (
     <div>
       <nav>
@@ -21,7 +22,10 @@ export default function Layout({ children }: Props) {
           </li>
         </ul>
       </nav>
-      <main>{children}</main>
+      <main>
+        <h1>{title}</h1>
+        {children}
+      </main>
     </div>
   );
 }
