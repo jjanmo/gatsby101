@@ -1,5 +1,6 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import GNB from '../GNB';
+import styled from 'styled-components';
 
 interface Props {
   title: string;
@@ -9,23 +10,24 @@ interface Props {
 export default function Layout({ children, title }: Props) {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <main>
+      <GNB />
+      <Main>
         <h1>{title}</h1>
         {children}
-      </main>
+      </Main>
     </div>
   );
 }
+
+const Main = styled.main`
+  box-sizing: border-box;
+  width: 40rem;
+  height: calc(100vh - 16px);
+  padding: 80px 0 0;
+  margin: auto;
+
+  @media (min-width: 901px) {
+    width: 60rem;
+    padding: 80px 40px 0;
+  }
+`;
