@@ -1,26 +1,38 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Layout from '@components/Layout';
+import SEO from '@components/SEO';
 import { PageProps, graphql } from 'gatsby';
 
 export default function Blog({ data }: PageProps<Queries.PostsQuery>) {
-  console.log(data);
   return (
     <Layout title="Blog">
-      <ul>
-        {data.allFile.nodes.map((file, index) => (
-          <li key={index}>{file.name}</li>
+      <section>
+        {data.allMdx.nodes.map((node, index) => (
+          <article key={index}>
+            <h2>{node.frontmatter?.title}</h2>
+            <span>{node.frontmatter?.date}</span> |{' '}
+            <span>{node.frontmatter?.category}</span> |{' '}
+            <span>{node.frontmatter?.author}</span>
+            <hr />
+            <p>{node.excerpt}</p>
+          </article>
         ))}
-      </ul>
+      </section>
     </Layout>
   );
 }
 
 export const query = graphql`
   query Posts {
-    allFile {
+    allMdx {
       nodes {
-        name
+        frontmatter {
+          author
+          category
+          date(formatString: "YYYY-MM-DD")
+          title
+        }
+        excerpt(pruneLength: 50)
       }
     }
   }
