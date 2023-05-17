@@ -1,5 +1,7 @@
 import type { GatsbyConfig } from 'gatsby';
 
+require('dotenv').config();
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Gatsby101`,
@@ -24,6 +26,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog-posts`,
       },
       __key: 'posts',
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `7brpuxjs3vai`,
+        accessToken: process.env.CONTENT_DELIVERY_ACCESS_TOKEN,
+      },
     },
   ],
 };
