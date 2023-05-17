@@ -17,6 +17,9 @@ export default function GNB() {
         <NavItem active={pathname === '/blog/'}>
           <Link to="/blog">Blog</Link>
         </NavItem>
+        <NavItem active={pathname === '/adopt/'}>
+          <Link to="/adopt">Adopt</Link>
+        </NavItem>
         <NavItem active={pathname === '/about/'}>
           <Link to="/about">About</Link>
         </NavItem>
