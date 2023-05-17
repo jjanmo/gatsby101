@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
-import styled from 'styled-components';
+import MainTitle from '@components/MainTitle';
 
 export default function Index() {
   return (
     <Layout title="Home">
-      <p>Gatsby101</p>
+      <MainTitle />
     </Layout>
   );
 }
