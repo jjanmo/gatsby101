@@ -35,7 +35,7 @@ const Container = styled.nav<{ isHome: boolean }>`
   align-items: center;
   color: ${({ isHome }) => (isHome ? 'white' : 'black')};
   background-color: ${({ isHome }) =>
-    isHome ? `rgba(256, 256, 256, 0.2)` : `rgba(200, 200, 200, 0.5)`};
+    isHome ? `rgba(256, 256, 256, 0.2)` : `white`};
   box-shadow: 0 5px 20px -10px #000;
 
   ul {
