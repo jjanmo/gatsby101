@@ -38,13 +38,11 @@ export default function Layout({ children, title }: Props) {
 
 const Main = styled.main`
   width: 40rem;
-  height: calc(100vh - 80px);
-  padding: 80px 0 0;
+  height: 100vh;
+  padding-top: 80px;
   margin: auto;
-  z-index: 10;
 
   @media (min-width: 901px) {
     width: 60rem;
-    padding: 80px 40px 0;
   }
 `;

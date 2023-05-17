@@ -5,7 +5,7 @@ interface Coordinate {
   x: number;
   y: number;
 }
-const SPEED = 0.09;
+const SPEED = 0.05;
 
 export default function MainTitle() {
   const mousePosition = useRef<Coordinate>({ x: 0, y: 0 });
@@ -42,7 +42,7 @@ export default function MainTitle() {
     <Container>
       <span
         style={{
-          transform: `translate3d(${-target.x / 5}px, ${target.y / 5}px, 0)`,
+          transform: `translate3d(${target.x / 3}px, ${target.y / 3}px, 0)`,
         }}
       >
         Gatsby101
@@ -53,7 +53,7 @@ export default function MainTitle() {
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -37,14 +37,15 @@ const Container = styled.nav<{ isHome: boolean }>`
   background-color: ${({ isHome }) =>
     isHome ? `rgba(256, 256, 256, 0.2)` : `white`};
   box-shadow: 0 5px 20px -10px #000;
+  z-index: 100;
 
   ul {
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     list-style: none;
     width: 100%;
+    height: 100%;
     padding: 0 2rem;
   }
 `;
@@ -60,11 +61,11 @@ const NavItem = styled.li<{ active: boolean }>`
 
   &::before {
     position: absolute;
-    bottom: -5px;
+    bottom: -8px;
     left: 0;
     content: '';
     width: 100%;
-    height: 3px;
+    height: 4px;
     background-color: ${({ active }) => (active ? '#4834d4' : 'transparent')};
   }
 `;
