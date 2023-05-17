@@ -28,21 +28,19 @@ export default function Layout({ children, title }: Props) {
         />
       )}
 
-      <div>
-        <GNB />
-        <Main>{children}</Main>
-      </div>
+      <GNB />
+      <Main>{children}</Main>
     </>
   );
 }
 
 const Main = styled.main`
   width: 40rem;
-  height: 100vh;
-  padding-top: 80px;
+  height: 100%;
+  padding: 120px 0 80px;
   margin: auto;
 
   @media (min-width: 901px) {
-    width: 60rem;
+    width: 70rem;
   }
 `;
