@@ -14,10 +14,10 @@ export default function GNB() {
         <NavItem $active={pathname === '/'}>
           <Link to="/">Home</Link>
         </NavItem>
-        <NavItem $active={pathname === '/blog/'}>
+        <NavItem $active={pathname.startsWith('/blog/')}>
           <Link to="/blog">Blog</Link>
         </NavItem>
-        <NavItem $active={pathname === '/adopt/'}>
+        <NavItem $active={pathname.startsWith('/adopt/')}>
           <Link to="/adopt">Adopt</Link>
         </NavItem>
         <NavItem $active={pathname === '/about/'}>
