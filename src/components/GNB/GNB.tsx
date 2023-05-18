@@ -9,18 +9,18 @@ export default function GNB() {
   const isHome = pathname === '/';
 
   return (
-    <Container isHome={isHome}>
+    <Container $isHome={isHome}>
       <ul>
-        <NavItem active={pathname === '/'}>
+        <NavItem $active={pathname === '/'}>
           <Link to="/">Home</Link>
         </NavItem>
-        <NavItem active={pathname === '/blog/'}>
+        <NavItem $active={pathname === '/blog/'}>
           <Link to="/blog">Blog</Link>
         </NavItem>
-        <NavItem active={pathname === '/adopt/'}>
+        <NavItem $active={pathname === '/adopt/'}>
           <Link to="/adopt">Adopt</Link>
         </NavItem>
-        <NavItem active={pathname === '/about/'}>
+        <NavItem $active={pathname === '/about/'}>
           <Link to="/about">About</Link>
         </NavItem>
       </ul>
@@ -28,7 +28,7 @@ export default function GNB() {
   );
 }
 
-const Container = styled.nav<{ isHome: boolean }>`
+const Container = styled.nav<{ $isHome: boolean }>`
   position: fixed;
   top: 0;
   right: 0;
@@ -36,9 +36,9 @@ const Container = styled.nav<{ isHome: boolean }>`
   height: 80px;
   display: flex;
   align-items: center;
-  color: ${({ isHome }) => (isHome ? 'white' : 'black')};
-  background-color: ${({ isHome }) =>
-    isHome ? `rgba(256, 256, 256, 0.2)` : `white`};
+  color: ${({ $isHome }) => ($isHome ? 'white' : 'black')};
+  background-color: ${({ $isHome }) =>
+    $isHome ? `rgba(256, 256, 256, 0.2)` : `white`};
   box-shadow: 0 5px 20px -10px #000;
   z-index: 100;
 
@@ -53,7 +53,7 @@ const Container = styled.nav<{ isHome: boolean }>`
   }
 `;
 
-const NavItem = styled.li<{ active: boolean }>`
+const NavItem = styled.li<{ $active: boolean }>`
   position: relative;
   margin: 0 1rem;
   font-size: 1.6rem;
@@ -69,6 +69,6 @@ const NavItem = styled.li<{ active: boolean }>`
     content: '';
     width: 100%;
     height: 4px;
-    background-color: ${({ active }) => (active ? '#4834d4' : 'transparent')};
+    background-color: ${({ $active }) => ($active ? '#4834d4' : 'transparent')};
   }
 `;
