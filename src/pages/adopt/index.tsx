@@ -6,12 +6,14 @@ import styled from 'styled-components';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function Adopt({ data }: PageProps<Queries.AnimalsQuery>) {
+  console.log(data);
   return (
     <Layout title="Adopt Animal">
+      <Title>보호동물 리스트</Title>
       <Container>
         {data.allContentfulLovingAnimal.nodes.map((animal) => (
-          <Link to={`/adopt/${animal.id}`}>
-            <Item key={animal.id}>
+          <Link key={animal.id} to={`/adopt/${animal.id}/`}>
+            <Item>
               <GatsbyImage
                 className="thumbnail"
                 image={animal.image?.gatsbyImageData!}
@@ -45,6 +47,10 @@ export const query = graphql`
 `;
 
 export const Head = () => <SEO title="Adopt Animal" />;
+
+export const Title = styled.h3`
+  text-align: center;
+`;
 
 const Container = styled.ul`
   width: 80%;
