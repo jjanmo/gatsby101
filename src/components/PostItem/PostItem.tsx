@@ -15,7 +15,7 @@ export default function PostItem({
   return (
     <S.ItemLink to={`/blog/${frontmatter?.slug}`}>
       <S.Container>
-        <S.ImageWrapper isEven={isEven}>
+        <S.ImageWrapper $isEven={isEven}>
           <GatsbyImage
             image={image!}
             alt={frontmatter?.title!}
@@ -23,7 +23,7 @@ export default function PostItem({
           />
         </S.ImageWrapper>
 
-        <S.Content isEven={isEven}>
+        <S.Content $isEven={isEven}>
           <h3>{frontmatter?.title}</h3>
           <p>{excerpt}</p>
         </S.Content>

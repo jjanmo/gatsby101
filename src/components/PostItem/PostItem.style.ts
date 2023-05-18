@@ -22,19 +22,19 @@ export const Container = styled.article`
   display: flex;
   align-items: center;
 `;
-export const ImageWrapper = styled.div<{ isEven: boolean }>`
+export const ImageWrapper = styled.div<{ $isEven: boolean }>`
   flex: 1;
-  order: ${({ isEven }) => (isEven ? 1 : 2)};
+  order: ${({ $isEven }) => ($isEven ? 1 : 2)};
 
   @media (min-width: 901px) {
     order: 1;
   }
 `;
-export const Content = styled.div<{ isEven: boolean }>`
+export const Content = styled.div<{ $isEven: boolean }>`
   padding: 10px 20px;
   flex: 1;
   align-self: flex-start;
-  order: ${({ isEven }) => (isEven ? 2 : 1)};
+  order: ${({ $isEven }) => ($isEven ? 2 : 1)};
 
   h3 {
     margin: 0;
