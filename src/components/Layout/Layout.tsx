@@ -40,7 +40,6 @@ const Main = styled.main`
   height: 100%;
   padding: 120px 0 80px;
   margin: auto;
-  background-color: beige;
 
   @media (min-width: 901px) {
     width: 70rem;
