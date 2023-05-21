@@ -28,6 +28,14 @@ const config: GatsbyConfig = {
       __key: 'posts',
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'about-icons',
+        path: `${__dirname}/about-icons`,
+      },
+      __key: 'about-icons',
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
