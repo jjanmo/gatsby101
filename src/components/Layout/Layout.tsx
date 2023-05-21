@@ -14,14 +14,12 @@ export default function Layout({ children, title }: Props) {
       {title === 'Home' && (
         <StaticImage
           src="../../images/bg.jpg"
-          layout="constrained"
           objectFit="cover"
           alt="bg-image"
           style={{
             position: 'absolute',
             top: 0,
             left: 0,
-            width: '100%',
             height: '100vh',
             zIndex: -1,
           }}
