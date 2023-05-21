@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function Adopt({ data }: PageProps<Queries.AnimalsQuery>) {
-  console.log(data);
   return (
     <Layout title="Adopt Animal">
       <Title>보호동물 리스트</Title>

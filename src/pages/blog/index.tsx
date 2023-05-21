@@ -6,10 +6,14 @@ import PostItem from '@components/PostItem/PostItem';
 import styled from 'styled-components';
 
 export default function Blog({ data }: PageProps<Queries.PostsQuery>) {
+  const filtered = data.allMdx.nodes.filter((node) =>
+    Boolean(node.frontmatter?.image)
+  );
+
   return (
     <Layout title="Blog">
       <Container>
-        {data.allMdx.nodes.map((node, index) => (
+        {filtered.map((node, index) => (
           <PostItem key={index} {...node} isEven={!!(index % 2)} />
         ))}
       </Container>
