@@ -100,7 +100,7 @@ StaticImage 컴퍼넌트를 사용하는 경우, 컴퍼넌트에서 제공하는
   # Hello World
   ```
 
-# Sourcing from Contentful
+# Sourcing from [Contentful](https://www.contentful.com/)
 
 gatsby는 다양한 데이터소스를 연결할 수 있도록 여러가지 장치를 제공해준다. 그 중 Contentful은 gatsby와 연결이 가능한 CMS(Content Management System)이다. 말그대로 컨텐츠(데이터)에 대한 CRUD가 가능한 GUI를 제공해주어서 개발자가 아닌 사람들이 좀 더 빠르고 쉽게 데이터를 컨트롤 할 수 있도록 도와준다.
 

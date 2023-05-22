@@ -14,7 +14,7 @@
 
 - [how to use MDX in gatsby](./docs/summary.md#mdx-in-gatsby)
 
-- [connect to [Contentful](https://www.contentful.com/) service in gatsby](./docs/summary.md#sourcing-from-contentful)
+- [connect to Contentful service in gatsby](./docs/summary.md#sourcing-from-contentful)
 
 - deploy using netlify
 
