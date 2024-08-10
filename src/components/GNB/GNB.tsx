@@ -36,9 +36,8 @@ const Container = styled.nav<{ $isHome: boolean }>`
   height: 80px;
   display: flex;
   align-items: center;
-  color: ${({ $isHome }) => ($isHome ? 'white' : 'black')};
-  background-color: ${({ $isHome }) =>
-    $isHome ? `rgba(256, 256, 256, 0.2)` : `white`};
+  color: ${({ $isHome }) => ($isHome ? 'rgb(236, 240, 241)' : 'black')};
+  background-color: ${({ $isHome }) => ($isHome ? `rgba(256, 256, 256, 0.2)` : `white`)};
   box-shadow: 0 5px 20px -10px #000;
   z-index: 100;
 
